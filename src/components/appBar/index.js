@@ -8,6 +8,10 @@ import MenuIcon from '@material-ui/icons/Menu';
 import Avatar from '@material-ui/core/Avatar'
 import Typography from '@material-ui/core/Typography'
 import Search from '../search';
+import Logo from '../image/logos.png'
+import Button from '@material-ui/core/Button'
+
+
 
 
 const useStyles = makeStyles((themes)=>({
@@ -25,6 +29,11 @@ const useStyles = makeStyles((themes)=>({
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center' 
+    },
+    imgstyles: {
+        height: '50px',
+        width:'60px'
+
     }
 
 }))
@@ -40,9 +49,9 @@ return <div className={classes.root}>
             <IconButton edge="start">
                 <MenuIcon className={classes.textPrimary} />
             </IconButton>
-            <Typography variant="h6" >
-                JayKayTube
-             </Typography>
+            <Button>
+                <img src={Logo} alt="image not found" className={classes.imgstyles}/>
+            </Button>
              </>
             <div className={classes.search}>
                 <Search handleSearch={handleSearch} />
